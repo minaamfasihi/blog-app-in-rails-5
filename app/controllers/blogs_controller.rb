@@ -71,6 +71,11 @@ class BlogsController < ApplicationController
     redirect_to blogs_url, notice: 'Post status has been updated.'
   end
 
+  def something
+    @else = params[:else]
+    @another_one = params[:another_one]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
